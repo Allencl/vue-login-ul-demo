@@ -14,25 +14,10 @@
           :columns="columns"
           :data="data"
       >
-
         <template slot-scope="{row}" slot="active">
-          <Button
-              type="primary"
-              size="small"
-              style="margin-right: 5px"
-              @click="editHandle(true,row)"
-          >编辑
-          </Button>
-          <Button
-              type="error"
-              size="small"
-              style="margin-right: 5px"
-              @click="deleteHandle(row)"
-          >删除
-          </Button>
-
+          <Button type="primary" size="small" style="margin-right: 5px" @click="editHandle(true,row)">编辑</Button>
+          <Button type="error" size="small" style="margin-right: 5px" @click="deleteHandle(row)">删除</Button>
         </template>
-
       </Table>
     </div>  
 
