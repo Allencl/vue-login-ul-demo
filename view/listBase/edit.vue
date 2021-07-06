@@ -5,7 +5,6 @@
         :title="titleModel"
         width="50%"
         class-name="wis-drawer"
-        :styles="styles"
         draggable
         @on-close="cancelHandle"
     >
@@ -65,7 +64,7 @@
         </Row>
         <Row>
           <i-col span="24">
-            <FormItem label="权限标识" prop="identifier" v-if="formData.type === 1">
+            <FormItem label="权限标识" prop="identifier" v-if="formData.type == 1">
               <Input
                   v-model="formData.identifier"
                   clearable
@@ -112,12 +111,12 @@ export default {
     return {
       showModel:false,  // 显示 弹框
 
-      styles: {
-        height: 'calc(100% - 55px)',
-        overflow: 'auto',
-        paddingBottom: '53px',
-        position: 'static'
-      },
+      // styles: {
+      //   height: 'calc(100% - 55px)',
+      //   overflow: 'auto',
+      //   paddingBottom: '53px',
+      //   position: 'static'
+      // },
 
       titleModel: '新增',  // 标题
 

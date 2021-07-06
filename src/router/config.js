@@ -1,23 +1,28 @@
 export default {
     routes: [
+        // 业务页面
+        {
+            name: 'listBase',
+            path: '/demo/list',
+            meta: {title: '基础页面-增删改', keepAlive: true},
+            component: () => import("@view/listBase/index.vue")
+        },   
+        {
+            name: 'formPage',
+            path: '/form/page',
+            meta: {title: '基础页面-表单页面', keepAlive: true},
+            component: () => import("@view/formPage/index.vue")
+        },         
+
+
+    ].concat([
+        // 首页
         {
             name: 'home',
             path: '/',
             meta: {title: '首页', keepAlive: true},
             component: () => import("@src/layout/home.vue"),
-        },
-
-        {
-            name: 'manageAuthority',
-            path: '/wis/manage/authority',
-            meta: {title: '权限管理', keepAlive: true},
-            component: () => import("@view/manageAuthority/index.vue")
         },        
-
-
-
-
-
         // 这个要放在最后
         {
             name: '404',
@@ -29,5 +34,5 @@ export default {
             path: "*",
             redirect: "/404"
         }
-    ]
+    ])
 }

@@ -1,5 +1,5 @@
-
 <template>
+    <!-- 全局公共按钮  用于 权限控制 -->
     <span>
         <Button
             :type="type"

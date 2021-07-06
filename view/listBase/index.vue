@@ -5,13 +5,7 @@
     />
 
     <div class="wis-table-top-tool-button">
-      <Button
-          type="info"
-          icon="md-add"
-          @click="editHandle(false)"
-      >新增
-      </Button>
-      <WisButton type="info" icon="md-add" @click="editHandle(false)">1111qqq</WisButton>
+      <WisButton type="info" icon="md-add" @click="editHandle(false)">新增</WisButton>
     </div>
 
     <div class="wis-table"> 
